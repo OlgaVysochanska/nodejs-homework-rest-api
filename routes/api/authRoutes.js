@@ -25,7 +25,7 @@ router.post("/login", loginSchema, login);
 router.get("/current", authenticate, getCurrent);
 
 router.patch(
-  "/current/subscription",
+  "/:id/subscription",
   authenticate,
   updateSubscriptionSchema,
   updateSubscription

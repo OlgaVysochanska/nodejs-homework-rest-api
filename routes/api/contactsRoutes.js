@@ -29,7 +29,7 @@ router.delete("/:id", authenticate, deleteContact);
 router.put("/:id", authenticate, patchContactSchema, changeContact);
 
 router.patch(
-  "/:id/favourite",
+  "/:id/favorite",
   authenticate,
   updateFavoriteSchema,
   updateStatusContact
