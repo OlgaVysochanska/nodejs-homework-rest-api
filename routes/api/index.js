@@ -1,3 +1,7 @@
-const router = require("./contacts.js");
+const contactsRouter = require("./contactsRoutes");
+const authRouter = require("./authRoutes");
 
-module.exports = router;
+module.exports = {
+  contactsRouter,
+  authRouter,
+};

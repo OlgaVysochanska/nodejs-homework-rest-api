@@ -1,11 +1,20 @@
 const {
-  addContactValidation,
-  patchContactValidation,
+  addContactSchema,
+  patchContactSchema,
   updateFavoriteSchema,
-} = require("./validationMiddleware");
+} = require("./contactsValidation");
+
+const {
+  registerSchema,
+  loginSchema,
+  updateSubscriptionSchema,
+} = require("./userValidation");
 
 module.exports = {
-  addContactValidation,
-  patchContactValidation,
+  addContactSchema,
+  patchContactSchema,
   updateFavoriteSchema,
+  registerSchema,
+  loginSchema,
+  updateSubscriptionSchema,
 };

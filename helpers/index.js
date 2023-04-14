@@ -1,3 +1,3 @@
-const HttpError = require("./HttpError.js");
+const HttpError = require("./HttpError");
 
-module.exports = HttpError;
+module.exports = { HttpError };

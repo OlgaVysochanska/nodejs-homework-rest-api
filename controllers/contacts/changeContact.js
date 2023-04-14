@@ -1,6 +1,6 @@
-const { HttpError } = require("../helpers");
+const { HttpError } = require("../../helpers");
 
-const Contact = require("../models");
+const { Contact } = require("../../models");
 
 const changeContact = async (req, res, next) => {
   try {

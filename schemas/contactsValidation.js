@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 module.exports = {
-  addContactValidation: async (req, res, next) => {
+  addContactSchema: async (req, res, next) => {
     const addSchema = Joi.object({
       name: Joi.string().required(),
       email: Joi.string().required(),
@@ -14,7 +14,7 @@ module.exports = {
 
     next();
   },
-  patchContactValidation: (req, res, next) => {
+  patchContactSchema: (req, res, next) => {
     const addSchema = Joi.object({
       name: Joi.string(),
       email: Joi.string(),
