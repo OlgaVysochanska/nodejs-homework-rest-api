@@ -38,4 +38,14 @@ module.exports = {
     }
     next();
   },
+  emailSchema: async (req, res, next) => {
+    const addSchema = Joi.object({
+      email: Joi.string().pattern(emailRegexp).required(),
+    });
+    const validationResult = addSchema.validate(req.body);
+    if (validationResult.error) {
+      return res.status(400).json({ status: validationResult.error.details });
+    }
+    next();
+  },
 };

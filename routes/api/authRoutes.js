@@ -7,12 +7,15 @@ const {
   logout,
   updateSubscription,
   updateAvatar,
+  verify,
+  resendVerifyEmail,
 } = require("../../controllers");
 
 const {
   registerSchema,
   loginSchema,
   updateSubscriptionSchema,
+  emailSchema,
 } = require("../../schemas");
 
 const { authenticate, upload } = require("../../middlewares");
@@ -20,6 +23,10 @@ const { authenticate, upload } = require("../../middlewares");
 const router = express.Router();
 
 router.post("/register", registerSchema, register);
+
+router.get("/verify/:verificationCode", verify);
+
+router.post("/verify", emailSchema, resendVerifyEmail);
 
 router.post("/login", loginSchema, login);
 
