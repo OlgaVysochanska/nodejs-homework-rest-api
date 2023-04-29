@@ -8,6 +8,7 @@ const {
   registerSchema,
   loginSchema,
   updateSubscriptionSchema,
+  emailSchema,
 } = require("./userValidation");
 
 module.exports = {
@@ -17,4 +18,5 @@ module.exports = {
   registerSchema,
   loginSchema,
   updateSubscriptionSchema,
+  emailSchema,
 };
